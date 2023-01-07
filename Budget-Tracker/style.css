@@ -58,7 +58,7 @@
     padding-top: 20px;
     padding-left: 10%;
     justify-content: center;
-    background-color: bisque;
+    background-color: rgb(228, 204, 175);
   }
   
   .formLine {
@@ -93,7 +93,7 @@
   }
   
   tbody {
-    background-color: bisque;
+    background-color: rgb(56, 34, 6);
     line-height: 30px;
     text-align: center;
   }
@@ -102,20 +102,23 @@
   
   button {
     width: 200px;
-    color: #fff;
+    color: blue;
     padding: 10px;
     text-align: center;
     font-size: 1.1em;
     line-height: 20px;
-    background-color: blue;
+    background-color: rgb(177, 177, 216);
     border-radius: 5px;
     margin: 14px 25%;
     cursor: pointer;
+    border-color: rgb(177, 177, 216);
   }
   
   button:hover {
     box-shadow: 0 0 0 2px grey;
     transition: 0.5s;
+    background: blue;
+    color: #fff;
   }
   
   a {
