@@ -40,6 +40,33 @@ const showTransactions = () => {
         <td>${transactions[i].name}</td>
         <td>${transactions[i].amount}</td>
         <td><a class="deleteButton" onclick="deleteTransaction(${transactions [i].id})">Delete</td>
-        `
+        </tr>
+        `;
     }
+}
+
+const deleteTransaction = (id) => {
+    for (let i = 0; i < transactions.length; i++) {
+        if (transactions[i].id == id) {
+            transactions.splice(i, 1)
+        }
+    }
+
+    localStorage.setItem('transactions', JSON.stringify(transactions));
+    showTransactions ();
+    updateBalance ();
+}
+
+const updateBalance = () => {
+    let balance = 0;
+
+    transactions.forEach((transaction) => {
+        if (transaction.type === "income") {
+            balance += Number(transaction.amount);
+        } else if (transaction.type === "expense") {
+            balance -= transaction.amount;
+        }
+    });
+
+    document.querySelector(".balance").textContent = balance;
 }
