@@ -18,6 +18,28 @@ function addTransaction (e) {
             amount,
             id: transactions.length > 0 ? transactions[transactions.length - 1].id + 1 : 1,
         }
-        
+
+        transactions.push (transaction);
+        localStorage.setItem('transactions', JSON.stringify(transactions));
+    }
+
+    document.getElementById('expForm').reset ();
+    showTransactions ();
+    updateBalance  ();
+}
+
+const showTransactions = () => {
+    const transactionTable = document.getElementById('transactionTable');
+
+    transactionTable.innerHTML = '';
+
+    for (let i = 0; i < transactions.length; i++) {
+        transactionTable.innerHTML += `
+        <tr>
+        <td>${transactions[i].type}</td>
+        <td>${transactions[i].name}</td>
+        <td>${transactions[i].amount}</td>
+        <td><a class="deleteButton" onclick="deleteTransaction(${transactions [i].id})">Delete</td>
+        `
     }
 }
