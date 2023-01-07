@@ -8,43 +8,48 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <section>
-        <div class="main-section">
             <div class="header">
-                <h1>Add a new Transaction</h1>
+                <header>
+                    <h1 class="title">My Budget Tracker</h1>
+                    <h1 class="topbar">Your Current Balance</h1>
+                    <p>
+                        <span class="currency">$</span>
+                        <span class="balance"></span>
+                    </p>
+                </header>
             </div>
-                <div class="top-section">
-                    <p>Type</p>
+                <div class="content">
+                    <h3 class="secoundTitle">Add to transaction: </h3>
+                    <div class="form">
+                        <form id="expForm">
+                            <div class="formLine left"></div>
+                            <span for="type">Type:</span>
+                            <select id="type"></select>
+                            <option value="chooseOne">Choose one...</option>
+                            <option value="income">Income</option>
+
+                        </form>
+                    </div>
                     <input type="file" placeholder="Choose One" />
                     <div class="top-section-right">
                         <p>Name: <input type="search" /></p>
                         <p>Amount: <input type="search" /></p>
                     </div>
-                    <button>Add to transactions</button>
+                    <button></button>
                 </div>
-                <div class="bottom-section">
-                        <table>
-                            <tr>
-                                <th>Type</th>
-                                <th>Name</th>
-                                <th>Amount</th>
-                                <th>Options</th>
-                            </tr>
-                            <tr>
-                                <td>Income</td>
-                                <td>Salary</td>
-                                <td>$500</td>
-                                <td><button>Delete</button></td>
-                            </tr>
-                            <tr>
-                                <td>Expenses</td>
-                                <td>Rent</td>
-                                <td>$100</td>
-                                <td><button>Delete</button></td>
-                            </tr>
+                <div class="content">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Name</th>
+                                    <th>Amount</th>
+                                    <th>Options</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transactionTable"></tbody>
                         </table>
                 </div>
         </div>
-    </section>
 </body>
 </html>
