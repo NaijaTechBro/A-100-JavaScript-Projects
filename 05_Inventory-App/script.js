@@ -7,4 +7,6 @@ function addInventory (e) {
 
     let title = document.getElementById('inventory-title').value;
     let amount = document.getElementById('user-amount').value;
+
+    if ( ty)
 }

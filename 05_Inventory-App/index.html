@@ -23,24 +23,32 @@
         <div class="container">
             <div class="sub-container">
 
-                <div class="user-amount-container">
-                    <h3>Enter Inventory</h3>
-                    <p class="hide error" id="product-title-error">
-                        Values cannot be empty
-                    </p>
-                    <input
-                    type="text"
-                    class="product-title"
-                    id="inventory-title"
-                    placeholder="Enter Title of Product"
-                    />
-                    <input 
-                    type="number"
-                    id="user-amount"
-                    placeholder="Enter Cost of Product"
-                    />
-                    <button class="submit" id="add-expenses">Add</button>
-                </div>
+                <form id="invForm">
+                    <div class="user-amount-container">
+                        <h3>Enter Inventory</h3>
+                        <p class="hide error" id="product-title-error">
+                            Values cannot be empty
+                        </p>
+                        <span for="type">Payment Status:</span>
+                        <select id="type">
+                        <option value="chooseOne">Choose one...</option>
+                        <option value="pending">Pending</option>
+                        <option value="paid">Paid</option>
+                        </select>
+                        <input
+                        type="text"
+                        class="product-title"
+                        id="inventory-title"
+                        placeholder="Enter Title of Product"
+                        />
+                        <input 
+                        type="number"
+                        id="user-amount"
+                        placeholder="Enter Cost of Product"
+                        />
+                        <button class="submit" id="add-expenses">Add</button>
+                    </div>
+                </form>
             </div>
 
             <div class="output-container flex-space" >
