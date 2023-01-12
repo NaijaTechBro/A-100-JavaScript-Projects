@@ -46,3 +46,27 @@ const showInventories = () => {
         `
     }
 }
+
+// Delete Inventory
+const deleteInventory = (id) => {
+    for (let i = 0; i < inventories.length; i++) {
+        if (inventories[i].id == id) {
+            inventories.splice(i, 1)
+        }
+    }
+
+    localStorage.setItem('inventory', JSON.stringify(inventories));
+    showInventories ();
+    updateBalance ();
+}
+
+// Update Balance
+const updateBalance = () => {
+    let balance = 0;
+
+    inventories.forEach((inventory) => {
+        if (inventory.type === "pending") {
+            
+        }
+    })
+}
