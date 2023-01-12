@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventory App</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="wrapper">
@@ -12,9 +24,86 @@
             <div class="sub-container">
 
                 <div class="user-amount-container">
+                    <h3>Enter Inventory</h3>
+                    <p class="hide error" id="product-title-error">
+                        Values cannot be empty
+                    </p>
+                    <input
+                    type="text"
+                    class="product-title"
+                    id="inventory-title"
+                    placeholder="Enter Title of Product"
+                    />
+                    <input 
+                    type="number"
+                    id="user-amount"
+                    placeholder="Enter Cost of Product"
+                    />
+                    <button class="submit" id="add-expenses">Add</button>
+                </div>
+            </div>
+
+            <div class="output-container flex-space" >
+                <div class="totalExpenses">
+                    <p>Total Inventory For Today</p>
+                    <span id="expenditure-value">0</span>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="list">
+            <h3>Inventory List</h3>
+            <div class="list-container" id="list"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="sub-container">
+                <div class="user-amount-container">
                     <h3>Enter Your Stock Inventory</h3>
                     <button class="add-btn" id="add-btn">Add</button>
                     <button class="add-btn" id="add-btn">Remove</button>
+                    <div class="output-container flex-space" >
+                        <div class="totalExpenses">
+                            <p>Total Expenses For Today</p>
+                            <span id="expenditure-value">0</span>
+                        </div>
+                    </div>
                     <div class="top-field">
                         <p>Please capture the new Item to add:</p>
                         <label>Description:</label>
@@ -46,6 +135,16 @@
                         id="submit-item"
                         >OK</button>
                     </div>
+                    <div class="item-table">
+                        <table>
+                            <thead>
+                                <th>Id</th>
+                                <th>Item</th>
+                                <th>Qty</th>
+                            </thead>
+                            <tbody id="inventoryTable"></tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,4 +153,4 @@
     
     <script rel="script" href="script.js"></script>
 </body>
-</html>
+</html> -->
