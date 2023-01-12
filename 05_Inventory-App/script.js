@@ -1,7 +1,7 @@
 // Add Inventory Button
 document.getElementById('invForm').addEventListener('submit', addInventory);
 
-const inventory = JSON.parse(localStorage.getItem('inventory')) || [];
+const inventories = JSON.parse(localStorage.getItem('inventories')) || [];
 
 function addInventory (e) {
     e.preventDefault ();
@@ -17,7 +17,25 @@ function addInventory (e) {
             type,
             title,
             amount,
-            id: inventory.length > 0 ? inventory[inventory.length - 1].id + 1 : 1,
+            id: inventories.length > 0 ? inventories[inventories.length - 1].id + 1 : 1,
         }
+
+        inventories.push (inventory);
+        localStorage.setItem('inventory', JSON.stringify(inventories));
+    }
+
+    document.getElementById('invForm').reset ();
+    showInventories ();
+    updateBalance ();
+}
+
+// Display Inventory 
+const showInventories = () => {
+    const inventoryTable = document.getElementById('inventoryTable');
+
+    inventoryTable.innerHTML = '';
+
+    for (let i = 0; i < inventories.length; i++) {
+        
     }
 }
