@@ -65,8 +65,12 @@ const updateBalance = () => {
     let balance = 0;
 
     inventories.forEach((inventory) => {
-        if (inventory.type === "pending") {
-            
+        if (inventory.type === "paid") {
+            balance += Number(inventory.amount);
+        } else if (inventory.type === "pending") {
+            balance -= inventory.amount;
         }
-    })
+    });
+
+    document.querySelector(".balance").textContent = balance;
 }
