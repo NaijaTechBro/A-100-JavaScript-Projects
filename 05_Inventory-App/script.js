@@ -36,6 +36,13 @@ const showInventories = () => {
     inventoryTable.innerHTML = '';
 
     for (let i = 0; i < inventories.length; i++) {
-        
+        inventoryTable.innerHTML += `
+        <tr>
+        <td>${inventories[i].type}</td>
+        <td>${inventories[i].title}</td>
+        <td>${inventories[i].amount}</td>
+        <td><a class="deleteButton" onclick="deleteInventory(${inventories [i].id})">Delete</td>
+        </tr>
+        `
     }
 }
