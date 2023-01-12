@@ -1,1 +1,1 @@
-const 
+const ProductTitleError = document.getElementById('product-title-error')
