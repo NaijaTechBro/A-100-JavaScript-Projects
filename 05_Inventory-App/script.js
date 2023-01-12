@@ -1,4 +1,5 @@
-
+// Add Inventory Button
+document.getElementById('invForm').addEventListener('submit', addInventory);
 
 const inventory = JSON.parse(localStorage.getItem('inventory')) || [];
 
