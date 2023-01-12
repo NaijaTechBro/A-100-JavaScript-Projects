@@ -60,7 +60,7 @@ body {
     
 }
 .output-container {
-    background-color: #018786;
+    background-color: #4aa5a5;
     color: #ffffff;
     border-radius: 0.3em;
     box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
@@ -119,6 +119,25 @@ body {
     margin: 1.2em;
     align-items: center;
 }
+
+  /* table style */
+table {
+    width: 100%;
+}
+
+thead {
+    background-color:  #018786;
+    color: white;
+    line-height: 30px;
+    font-size: 300;
+}
+
+tbody {
+    background-color: rgb(56, 34, 6);
+    line-height: 30px;
+    text-align: center;
+}
+
 .product-title {
     margin-bottom: 1em;
 }
